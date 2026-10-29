@@ -1,4 +1,3 @@
-import "./components/Weather"
 import { Weather } from "./components/Weather";
 
 export function App(){
