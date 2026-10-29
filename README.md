@@ -7,3 +7,5 @@ their chosen location.
 The website will first show the weather data of your current location
 when loaded by getting the user's location with axios. 
 The whole project is written in React with JavaScript.
+
+It can be found here: https://qookie-weather.netlify.app/
