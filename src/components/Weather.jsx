@@ -1,13 +1,20 @@
 import { useEffect, useRef, useState } from "react"
 import axios from "axios";
 import "./Weather.css"
-import clear from "../../public/clear.png"
-import cloud from "../../public/cloud.png"
-import drizzle from "../../public/drizzle.png"
-import humidity from "../../public/humidity.png"
-import rain from "../../public/rain.png"
+import clear_day from "../../public/01d.png"
+import clear_night from "../../public/01n.png"
+import cloudy_day from "../../public/02d.png"
+import cloudy_night from "../../public/02n.png"
+import overcast from "../../public/03.png"
+import broken_cloud from "../../public/04.png"
+import shower_rain from "../../public/09.png"
+import rain_day from "../../public/10d.png"
+import rain_night from "../../public/10n.png"
+import thunderstorm from "../../public/11.png"
+import snow from "../../public/13.png"
+import mist from "../../public/50.png"
 import search from "../../public/search.png"
-import snow from "../../public/snow.png"
+import humidity from "../../public/humidity.png"
 import wind from "../../public/wind.png"
 
 export function Weather() {
@@ -15,20 +22,24 @@ export function Weather() {
 	const [weatherData, setWeatherData] = useState(false);
 
 	const all_icons = {
-		"01d": clear,
-		"01n": clear,
-		"02d": cloud,
-		"02n": cloud,
-		"03d": cloud,
-		"03n": cloud,
-		"04d": drizzle,
-		"04n": drizzle,
-		"09d": rain,
-		"09n": rain,
-		"10d": rain,
-		"10n": rain,
+		"01d": clear_day,
+		"01n": clear_night,
+		"02d": cloudy_day,
+		"02n": cloudy_night,
+		"03d": overcast,
+		"03n": overcast,
+		"04d": broken_cloud,
+		"04n": broken_cloud,
+		"09d": shower_rain,
+		"09n": shower_rain,
+		"10d": rain_day,
+		"10n": rain_night,
+		"11d": thunderstorm,
+		"11n": thunderstorm,
 		"13d": snow,
-		"13n": snow
+		"13n": snow,
+		"50d": mist,
+		"50n": mist
 	};
 
 	async function searchCity(city) {
